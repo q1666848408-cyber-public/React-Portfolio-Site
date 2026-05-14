@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "首页", "awards": "荣誉", "competition": "竞赛",
+    "research": "科研", "internship": "实习", "projects": "作品集", "contact": "联系我"
+  },
+  "hero": {
+    "greeting": "你好，我是",
+    "name": "YOUR NAME",
+    "title": "YOUR TITLE",
+    "bio": "A short bio describing your background, research interests, and goals.",
+    "gpa": "X.X/4.0",
+    "rankLabel": "学业排名",
+    "rank": "X/XXX"
+  },
+  "awards": {
+    "title": "荣誉奖项",
+    "items": [
+      { "title": "国家级奖项名称", "org": "颁奖机构", "year": "2024", "highlight": true },
+      { "title": "校级奖项名称",   "org": "颁奖机构", "year": "2023" }
+    ]
+  },
+  "competition": {
+    "title": "竞赛经历",
+    "overviewLabel": "项目概述",
+    "contributionLabel": "个人贡献",
+    "items": [
+      {
+        "name": "竞赛名称",
+        "award": "奖项等级",
+        "level": "校级",
+        "period": "2024.05",
+        "overview": "项目概述内容",
+        "contribution": "个人贡献内容"
+      }
+    ]
+  },
+  "research": {
+    "title": "科研经历",
+    "overviewLabel": "研究概述",
+    "contributionLabel": "个人贡献",
+    "items": [
+      {
+        "id": "research-1",
+        "title": "研究课题名称",
+        "paper": "论文标题（如有）",
+        "authorNote": "作者备注",
+        "period": "2024 — 2025",
+        "tag": "研究方向",
+        "overview": "研究概述",
+        "contribution": "个人贡献"
+      }
+    ]
+  },
+  "internship": {
+    "title": "实习经历",
+    "items": [
+      {
+        "company": "公司名称",
+        "role": "岗位名称",
+        "period": "2024.06 — 2024.09",
+        "tags": ["Tag1", "Tag2"],
+        "bullets": ["工作内容一", "工作内容二"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "项目",
+    "subtitle": "以下为本人参与开发的项目",
+    "viewCode": "查看代码",
+    "items": [
+      {
+        "name": "Project Name",
+        "description": "Project description goes here.",
+        "tags": ["React", "TypeScript"],
+        "url": "https://github.com/your-org/your-repo"
+      }
+    ]
+  },
+  "contact": {
+    "title": "联系我",
+    "subtitle": "欢迎交流合作"
+  }
+}

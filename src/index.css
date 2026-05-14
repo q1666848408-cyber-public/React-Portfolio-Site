@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream-50: #FDFCFA;
+  --color-cream-100: #F7F3EE;
+  --color-cream-200: #F0EBE3;
+  --color-cream-300: #E5DDD3;
+  --color-cream-400: #D4C9BC;
+  --color-cream-500: #BDB0A0;
+  --color-brown-400: #9B7E51;
+  --color-brown-500: #7A6240;
+  --color-brown-600: #5C4A2E;
+  --color-stone-900: #1C1917;
+  --color-stone-700: #44403C;
+  --color-stone-500: #78716C;
+  --color-stone-400: #A8A29E;
+  --color-stone-200: #E7E5E4;
+
+  --font-sans: 'Inter', 'Noto Serif SC', system-ui, sans-serif;
+  --font-serif: 'Noto Serif SC', serif;
+}
+
+/* ── Theme tokens ───────────────────────────────────────── */
+:root {
+  --c-bg:     #F7F3EE;
+  --c-bg2:    #F0EBE3;
+  --c-card:   #FDFCFA;
+  --c-line:   #E5DDD3;
+  --c-line2:  #D4C9BC;
+  --c-line3:  #C4B49E;
+  --c-t1:     #1C1917;
+  --c-t2:     #44403C;
+  --c-t3:     #78716C;
+  --c-t4:     #A8A29E;
+  --c-acc:    #9B7E51;
+  --c-acc2:   #7A6240;
+  --c-acc3:   #BDB0A0;
+  --c-sub:    #F0EBE3;
+  --c-dot:    #C4B9AA;
+  --c-dot-f:  #D4C9BC;
+  /* Inverted surface (dark card in light mode) */
+  --c-inv:    #1C1917;
+  --c-inv-t:  #FDFCFA;
+  /* CTA button */
+  --c-btn:    #1C1917;
+  --c-btn-t:  #FDFCFA;
+  --c-btn-h:  #44403C;
+}
+
+.dark {
+  --c-bg:     #0D0D0D;
+  --c-bg2:    #111111;
+  --c-card:   #1A1A1A;
+  --c-line:   #262626;
+  --c-line2:  #333333;
+  --c-line3:  #3D3831;
+  --c-t1:     #F5F5F4;
+  --c-t2:     #D6D3D1;
+  --c-t3:     #A8A29E;
+  --c-t4:     #57534E;
+  --c-acc:    #C4A97A;
+  --c-acc2:   #9B7E51;
+  --c-acc3:   #3D3020;
+  --c-sub:    #1E1A14;
+  --c-dot:    #1F1F1F;
+  --c-dot-f:  #1A1A1A;
+  --c-inv:    #2D2318;
+  --c-inv-t:  #F5F5F4;
+  --c-btn:    #C4A97A;
+  --c-btn-t:  #1A1A1A;
+  --c-btn-h:  #9B7E51;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--c-bg);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Noto Serif SC', system-ui, sans-serif;
+  color: var(--c-t1);
+  background-color: var(--c-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--c-acc);
+  color: var(--c-card);
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--c-bg2); }
+::-webkit-scrollbar-thumb { background: var(--c-line2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--c-acc); }
+
+/* Dot grid patterns — auto-adapt via CSS vars */
+.dot-grid {
+  background-image: radial-gradient(circle, var(--c-dot) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.dot-grid-fine {
+  background-image: radial-gradient(circle, var(--c-dot-f) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+
+/* ── Additional keyframes ───────────────────────────────── */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(196, 169, 122, 0); }
+  50%       { box-shadow: 0 0 20px 4px rgba(196, 169, 122, 0.15); }
+}
+@keyframes border-walk {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animations */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-18px) rotate(2deg); }
+  66%       { transform: translateY(-8px) rotate(-1deg); }
+}
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-24px) rotate(3deg); }
+}
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+@keyframes drift {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25%       { transform: translateX(8px) translateY(-12px); }
+  50%       { transform: translateX(-4px) translateY(-20px); }
+  75%       { transform: translateX(-10px) translateY(-8px); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50%       { transform: scale(1.08); opacity: 0.15; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+
+@keyframes float-particle {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); opacity: var(--p-op, 0.06); }
+  25%       { transform: translateY(-14px) translateX(4px) scale(1.1); }
+  50%       { transform: translateY(-22px) translateX(-3px) scale(0.95); opacity: calc(var(--p-op, 0.06) * 1.6); }
+  75%       { transform: translateY(-10px) translateX(6px) scale(1.05); }
+}
+
+
+@keyframes aurora-drift-1 {
+  0%, 100% { transform: translate(0%, 0%) scale(1); }
+  33%       { transform: translate(15%, 8%) scale(1.1); }
+  66%       { transform: translate(-8%, 18%) scale(0.95); }
+}
+@keyframes aurora-drift-2 {
+  0%, 100% { transform: translate(0%, 0%) scale(1); }
+  50%       { transform: translate(-12%, -10%) scale(1.15); }
+}
+@keyframes aurora-drift-3 {
+  0%, 100% { transform: translate(0%, 0%) scale(1) rotate(0deg); }
+  50%       { transform: translate(8%, -8%) scale(1.05) rotate(8deg); }
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes eq-bar {
+  0%   { transform: scaleY(0.3); }
+  100% { transform: scaleY(1.0); }
+}
+.float-slow   { animation: float-slow   7s ease-in-out infinite; }
+.float-medium { animation: float-medium 5s ease-in-out infinite; }
+.float-fast   { animation: float-fast   3.5s ease-in-out infinite; }
+.drift        { animation: drift        9s ease-in-out infinite; }
+.spin-slow    { animation: spin-slow    20s linear infinite; }
+.pulse-ring   { animation: pulse-ring   4s ease-in-out infinite; }
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--c-acc), var(--c-acc3));
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+@keyframes card-shimmer {
+  0%   { transform: translateX(-120%) skewX(-20deg); }
+  100% { transform: translateX(320%) skewX(-20deg); }
+}
+
+@keyframes ripple-ring {
+  0%   { transform: scale(1); opacity: 0.45; }
+  100% { transform: scale(3.2); opacity: 0; }
+}
+
+/* Marquee fade mask + hover pause */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.marquee-mask:hover .marquee-track {
+  animation-play-state: paused !important;
+}

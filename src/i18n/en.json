@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Home", "awards": "Awards", "competition": "Competition",
+    "research": "Research", "internship": "Internship", "projects": "Projects", "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "YOUR NAME",
+    "title": "YOUR TITLE",
+    "bio": "A short bio describing your background, research interests, and goals.",
+    "gpa": "X.X/4.0",
+    "rankLabel": "Class Rank",
+    "rank": "X/XXX"
+  },
+  "awards": {
+    "title": "Awards & Honors",
+    "items": [
+      { "title": "National Award Name", "org": "Awarding Body", "year": "2024", "highlight": true },
+      { "title": "University Award Name", "org": "Awarding Body", "year": "2023" }
+    ]
+  },
+  "competition": {
+    "title": "Competition",
+    "overviewLabel": "Overview",
+    "contributionLabel": "My Contribution",
+    "items": [
+      {
+        "name": "Competition Name",
+        "award": "Award Level",
+        "level": "University",
+        "period": "2024.05",
+        "overview": "Project overview content",
+        "contribution": "Personal contribution content"
+      }
+    ]
+  },
+  "research": {
+    "title": "Research",
+    "overviewLabel": "Overview",
+    "contributionLabel": "My Contribution",
+    "items": [
+      {
+        "id": "research-1",
+        "title": "Research Topic Title",
+        "paper": "Paper title (if any)",
+        "authorNote": "Author note",
+        "period": "2024 — 2025",
+        "tag": "Research Area",
+        "overview": "Research overview",
+        "contribution": "Personal contribution"
+      }
+    ]
+  },
+  "internship": {
+    "title": "Internship",
+    "items": [
+      {
+        "company": "Company Name",
+        "role": "Role Title",
+        "period": "Jun 2024 — Sep 2024",
+        "tags": ["Tag1", "Tag2"],
+        "bullets": ["Work item one", "Work item two"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Selected projects I've built",
+    "viewCode": "View Code",
+    "items": [
+      {
+        "name": "Project Name",
+        "description": "Project description goes here.",
+        "tags": ["React", "TypeScript"],
+        "url": "https://github.com/your-org/your-repo"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Open to collaboration"
+  }
+}
